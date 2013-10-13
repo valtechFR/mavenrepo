@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<workspaceFilter version="1.0">
-    <filter root="/etc/packages/valtech/maventest/maventest-release-security-1.0-SNAPSHOT.zip" />
-    <filter root="/etc/packages/valtech/maventest/maventest-groups-1.0-SNAPSHOT.zip" />
-    <filter root="/etc/packages/valtech/maventest/maventest-content-acl-1.0-SNAPSHOT.zip" />
-</workspaceFilter>

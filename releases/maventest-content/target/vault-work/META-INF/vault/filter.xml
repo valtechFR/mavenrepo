@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<workspaceFilter version="1.0">
-    <filter root="/content/maventest" />
-    <filter root="/etc/designs/valtech/maventest">
-        <include pattern="/etc/designs/valtech/maventest/jcr:content" />
-    </filter>
-    <filter root="/content/dam/maventest" />
-    <filter root="/content/share/maventest" />
-</workspaceFilter>
