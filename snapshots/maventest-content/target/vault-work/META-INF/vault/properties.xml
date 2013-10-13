@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>VALTECH Maven Test Project Content</comment>
+<entry key="createdBy">Valtech</entry>
+<entry key="name">maventest-content</entry>
+<entry key="created">2013-07-01T17:54:29.446+0200</entry>
+<entry key="groupId">com.valtech.cq.maventest</entry>
+<entry key="version">1.0-SNAPSHOT</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="group">valtech/maventest</entry>
+<entry key="description">VALTECH Maven Test Project content</entry>
+<entry key="artifactId">maventest-content</entry>
+<entry key="path">/etc/packages/valtech/maventest/maventest-content.zip</entry>
+</properties>

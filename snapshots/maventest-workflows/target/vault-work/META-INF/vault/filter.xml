@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/etc/workflow/models/maventest" />
+    <filter root="/etc/workflow/launcher/config">
+        <include pattern="/etc/workflow/launcher/config/maventest_demo_launcher" />
+    </filter>
+</workspaceFilter>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>VALTECH Maven Test Project Content ACLs</comment>
+<entry key="createdBy">Valtech</entry>
+<entry key="name">maventest-content-acl</entry>
+<entry key="acHandling">Overwrite</entry>
+<entry key="created">2013-07-01T17:54:30.062+0200</entry>
+<entry key="groupId">com.valtech.cq.maventest</entry>
+<entry key="version">1.0-SNAPSHOT</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="group">valtech/maventest</entry>
+<entry key="description">VALTECH Maven Test Project content repository policies (rep:policy)</entry>
+<entry key="artifactId">maventest-content-acl</entry>
+<entry key="path">/etc/packages/valtech/maventest/maventest-content-acl.zip</entry>
+</properties>

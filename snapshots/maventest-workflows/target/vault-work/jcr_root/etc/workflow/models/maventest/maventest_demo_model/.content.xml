@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:tags="[workflow:dam]"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:description="Demo workflow for Maven Test Project."
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Maven Test Project Demo Workflow"
+        sling:resourceType="cq/workflow/components/pages/model"
+        pageDate="{Date}2012-08-01T15:39:36.081+02:00">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+        </flow>
+        <model/>
+    </jcr:content>
+</jcr:root>
