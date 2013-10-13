@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0">
+    <scr:component immediate="true" name="com.valtech.cq.maventest.HelloWorldAdapterFactory">
+        <implementation class="com.valtech.cq.maventest.impl.HelloWorldAdapterFactory"/>
+        <service servicefactory="false">
+            <provide interface="org.apache.sling.api.adapter.AdapterFactory"/>
+        </service>
+        <property name="service.vendor" value="Valtech S.A."/>
+        <property name="service.description" value="HelloWorld factory adapter"/>
+        <property name="adaptables">
+            org.apache.sling.api.resource.Resource
+            org.apache.sling.api.resource.ResourceResolver
+        </property>
+        <property name="adapters">
+            com.valtech.cq.maventest.resource.HelloWorld
+            com.valtech.cq.maventest.service.HelloWorldService
+        </property>
+        <property name="service.pid" value="com.valtech.cq.maventest.HelloWorldAdapterFactory"/>
+        <reference name="helloWorldService" interface="com.valtech.cq.maventest.service.HelloWorldService" cardinality="1..1" policy="static" bind="bindHelloWorldService" unbind="unbindHelloWorldService"/>
+    </scr:component>
+    <scr:component immediate="true" name="com.valtech.cq.maventest.service.HelloWorldService">
+        <implementation class="com.valtech.cq.maventest.impl.service.HelloWorldServiceImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.valtech.cq.maventest.service.HelloWorldService"/>
+        </service>
+        <property name="service.description" value="Maven Test Project Hello World Service"/>
+        <property name="service.vendor" value="Valtech S.A."/>
+        <property name="service.pid" value="com.valtech.cq.maventest.service.HelloWorldService"/>
+    </scr:component>
+    <scr:component name="com.valtech.cq.maventest.impl.servlet.HelloWorldServlet">
+        <implementation class="com.valtech.cq.maventest.impl.servlet.HelloWorldServlet"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Servlet"/>
+        </service>
+        <property name="sling.servlet.resourceTypes">
+            valtech/maventest/components/maventest
+        </property>
+        <property name="sling.servlet.extensions">
+            json
+        </property>
+        <property name="sling.servlet.methods">
+            GET
+        </property>
+        <property name="service.vendor" value="Valtech"/>
+        <property name="service.pid" value="com.valtech.cq.maventest.impl.servlet.HelloWorldServlet"/>
+        <reference name="helloWorldService" interface="com.valtech.cq.maventest.service.HelloWorldService" cardinality="1..1" policy="static" bind="bindHelloWorldService" unbind="unbindHelloWorldService"/>
+    </scr:component>
+    <scr:component name="com.valtech.cq.maventest.impl.servlet.TestReplicationServlet">
+        <implementation class="com.valtech.cq.maventest.impl.servlet.TestReplicationServlet"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Servlet"/>
+        </service>
+        <property name="sling.servlet.paths">
+            /bin/uat/replicate
+        </property>
+        <property name="sling.servlet.methods">
+            GET
+        </property>
+        <property name="service.vendor" value="Valtech"/>
+        <property name="service.pid" value="com.valtech.cq.maventest.impl.servlet.TestReplicationServlet"/>
+        <reference name="replicator" interface="com.day.cq.replication.Replicator" cardinality="1..1" policy="static" bind="bindReplicator" unbind="unbindReplicator"/>
+        <reference name="repository" interface="org.apache.sling.jcr.api.SlingRepository" cardinality="1..1" policy="static" bind="bindRepository" unbind="unbindRepository"/>
+        <reference name="agentManager" interface="com.day.cq.replication.AgentManager" cardinality="1..1" policy="static" bind="bindAgentManager" unbind="unbindAgentManager"/>
+    </scr:component>
+</components>

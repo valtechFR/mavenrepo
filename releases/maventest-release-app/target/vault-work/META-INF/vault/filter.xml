@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/valtech/maventest/install" />
+    <filter root="/etc/packages/valtech/maventest/maventest-components-1.0-SNAPSHOT.zip" />
+    <filter root="/etc/packages/valtech/maventest/maventest-workflows-1.0-SNAPSHOT.zip" />
+    <filter root="/etc/packages/valtech/maventest/maventest-config-1.0-SNAPSHOT.zip" />
+</workspaceFilter>

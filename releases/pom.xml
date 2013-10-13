@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<!-- 
+		Usage DEV : 
+		- Generate and install (you need a running CQ instance) : 
+			mvn clean install -P cq-install -Dsling.url=http://localhost:5500
+			
+		Usage CI :
+		- Clean an author instance, install and replicate app, and publish content :
+			mvn clean install -D cq-deploy-clean-all -D cq-deploy-release-app -D cq-deploy-release-content -D cq-deploy-release-security -Dsling.url=http://localhost:5500 
+			
+		Usage RELEASE :
+		- Update module versions : 
+			mvn release:update-versions
+		- Release dryRun : 
+			mvn release:clean release:prepare release:perform -B -D dryRun
+		- Release : 
+			mvn release:clean release:prepare release:perform -B
+	-->
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.valtech.cq</groupId>
+		<artifactId>parent</artifactId>
+		<version>5.5.18</version>
+	</parent>
+
+	<groupId>com.valtech.cq.maventest</groupId>
+	<artifactId>maventest</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>VALTECH Maven Test Project Parent</name>
+	<description>VALTECH Maven Test Project parent POM</description>
+	<url>http://localhost:5602</url>
+	<inceptionYear>2013</inceptionYear>
+
+	<properties>
+		<application.name>maventest</application.name>
+	</properties>
+
+	<scm>
+		<connection>scm:svn:https://codehub.valtech-agency.fr/scm/svn/valtech/maventest/trunk</connection>
+		<developerConnection>scm:svn:https://codehub.valtech-agency.fr/scm/svn/valtech/maventest/trunk</developerConnection>
+		<url>https://codehub.valtech-agency.fr/scm/svn/valtech/maventest/trunk</url>
+	</scm>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>maventest-core</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>maventest-components</artifactId>
+				<version>${project.version}</version>
+				<type>zip</type>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>maventest-config</artifactId>
+				<version>${project.version}</version>
+				<type>zip</type>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>maventest-workflows</artifactId>
+				<version>${project.version}</version>
+				<type>zip</type>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>maventest-content-acl</artifactId>
+				<version>${project.version}</version>
+				<type>zip</type>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>maventest-groups</artifactId>
+				<version>${project.version}</version>
+				<type>zip</type>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>maventest-clean-all</artifactId>
+				<version>${project.version}</version>
+				<type>zip</type>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>maventest-release-app</artifactId>
+				<version>${project.version}</version>
+				<type>zip</type>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>maventest-release-security</artifactId>
+				<version>${project.version}</version>
+				<type>zip</type>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>maventest-content</artifactId>
+				<version>${project.version}</version>
+				<type>zip</type>
+			</dependency>
+
+
+        </dependencies>
+	</dependencyManagement>
+	
+  <modules>
+    <module>maventest-core</module>
+    <module>maventest-components</module>
+    <module>maventest-workflows</module>
+    <module>maventest-config</module>
+    <module>maventest-content</module>
+    <module>maventest-groups</module>
+    <module>maventest-content-acl</module>
+    <module>maventest-release-app</module>
+    <module>maventest-release-security</module>
+    <module>maventest-clean-all</module>
+  </modules>
+</project>

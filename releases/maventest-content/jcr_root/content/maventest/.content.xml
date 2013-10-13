@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:language="en"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Maven Test Project"
+        sling:resourceType="foundation/components/redirect"
+        sling:redirect="{Boolean}true"
+        sling:redirectStatus="302"
+       	redirectTarget="/content/maventest/en/home"
+       	cq:allowedTemplates="[/apps/valtech/maventest/templates/.*]"
+       	cq:designPath="/etc/designs/valtech/maventest">
+        <image
+            jcr:lastModified="{Date}2012-07-09T21:39:04.805+02:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+    <home/>
+</jcr:root>
